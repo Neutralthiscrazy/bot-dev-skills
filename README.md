@@ -1,21 +1,22 @@
 # bot-dev-skills
 
-Companion skill pack for **building bots** — Telegram, Discord, LLM-streaming
-replies, serverless deploy, and async-runtime patterns. Five sub-skill
-orchestrators, one `npx skills add` ships all of them.
+Companion skill pack for **building bots** — Telegram, Discord,
+LLM-streaming replies, serverless deploy, and async-runtime patterns.
+Five sub-skill orchestrators, one `npx skills add` ships all of them.
 
 ## Status
 
-This pack ships **progressively** as each sub-orchestrator is authored and
-reviewed.
+This pack ships **all 5 sub-orchestrators** as a unit. Each is authored
+fresh from first-party docs and battle-tested patterns; the SKILL.md is
+yours under MIT, the cited upstream sources retain their own licenses.
 
-| #  | sub-skill              | status   |
-|---:|------------------------|----------|
-| 1  | telegram-bot-dev       | shipped  |
-| 2  | discord-bot-dev        | shipped  |
-| 3  | llm-streaming-reply    | upcoming |
-| 4  | serverless-bot-deploy  | upcoming |
-| 5  | bot-async-runtime      | upcoming |
+| #  | sub-skill              | status |
+|---:|------------------------|--------|
+| 1  | telegram-bot-dev       | shipped |
+| 2  | discord-bot-dev        | shipped |
+| 3  | llm-streaming-reply    | shipped |
+| 4  | serverless-bot-deploy  | shipped |
+| 5  | bot-async-runtime      | shipped |
 
 ## Install
 
@@ -24,17 +25,18 @@ npx -y skills add Neutralthiscrazy/bot-dev-skills -a claude-code -g
 ```
 
 Without `-g`, install lands at `<cwd>/.claude/skills/` — usually wrong.
-**Always pass `-g`.** Until all 5 ship, you'll get 2 from `telegram-bot-dev`
-and `discord-bot-dev`; remaining 3 land via `npx skills` upgrades
-automatically when this repo is updated.
+**Always pass `-g`.** Replace `claude-code` with `codex` / `opencode` /
+other agents as needed.
 
 ## What this pack is (and isn't)
 
 ### Is
 
 - Opinionated digests written from first-party docs and battle-tested
-  patterns. We cite upstream docs (aiogram.dev, grammy.dev, telegram Bot
-  API, discord.js guide, discord.com/developers/docs, etc.) inline; you
+  patterns. We cite upstream docs (aiogram.dev, grammy.dev, telegram
+  Bot API, discord.js guide, discord.com/developers/docs,
+  platform.openai.com, docs.anthropic.com, Cloudflare Workers docs,
+  Python asyncio stdlib, Node.js event-loop docs, etc.) inline; you
   verify there.
 - Each sub-orchestrator has its own routing table and `references/*.md`
   files loaded on demand.
@@ -53,8 +55,8 @@ under MIT for the digest text. Upstream sources retain their own licenses
 and copyrights; see `Sources cited` sections inside each sub-skill's
 SKILL.md for the full list.
 
-Re-sync discipline does not apply (we are not vendoring — there is nothing
-to re-download).
+Re-sync discipline does not apply (we are not vendoring — there is
+nothing to re-download).
 
 ## License
 
